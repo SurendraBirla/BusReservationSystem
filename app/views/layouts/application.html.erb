@@ -11,6 +11,28 @@
   </head>
 
   <body>
+
+     <p class="notice"><%= notice %></p>
+     <p class="alert"><%= alert %></p>
+
+     <div class="top_bar">
+     <div class="move_right">
+       <% if current_bus_owner %>
+         <%= current_bus_owner.email %>
+         <%= link_to("Sign Out", destroy_bus_owner_session_path) %>
+       <% elsif current_customer %>
+         <%= current_customer.email %>
+         <%= link_to("Sign Out", destroy_customer_session_path) %>
+       <% else %>
+         <%= link_to("Bus Owner Sign Up", new_bus_owner_registration_path) %>
+         <%= link_to("Bus Owner Log In", new_bus_owner_session_path) %>
+         <%= link_to("Customer Sign Up", new_customer_registration_path) %>
+         <%= link_to("Customer Log In", new_customer_session_path) %>
+       <% end %>
+     </div>
+      <%# <%= link_to "Buses", buses_path %> %>
+   </div><br><br>
+
     <%= yield %>
   </body>
 </html>

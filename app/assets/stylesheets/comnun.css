@@ -1,0 +1,11 @@
+.alert{
+	color: red;
+}
+
+.top_bar a{
+	margin-right: 10px;
+}
+
+.move_right{
+	float: right;
+}
