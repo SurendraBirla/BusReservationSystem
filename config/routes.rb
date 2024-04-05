@@ -1,6 +1,13 @@
 Rails.application.routes.draw do
+  # get 'buses/index'
+  # get 'buses/new'
+  # get 'buses/create'
+
   devise_for :customers
   devise_for :bus_owners
+
+  resources :buses, only:[:index, :new, :create]
+  
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.

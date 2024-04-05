@@ -1,0 +1,40 @@
+<h1>New Bus</h1><br>
+
+<%= form_with(model: @bus) do |form| %>
+
+    <%=form.label :Name %> 
+    <%= form.text_field :name %> <br><br>
+
+    <%= form.label :Registration_No %> 
+    <%= form.text_field :registration_no %> <br><br>
+
+    <%=  form.label :Source %> 
+    <%= form.text_field :source %> <br><br>
+
+    <%=  form.label :Destination %> 
+    <%= form.text_field :destination %> <br><br>
+
+    <%=  form.label :No_Of_Seats %> 
+    <%= form.number_field :no_of_seats %> <br><br>
+
+    <%= form.submit %>
+
+<% end %>
+
+
+
+ <% if @bus.errors.any? %>
+  <div id="error_explanation">
+    <h2><%= pluralize(@bus.errors.count, "error") %> prohibited this bus from being saved:</h2>
+    <ul>
+      <% @bus.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
+
+
+
+
+
