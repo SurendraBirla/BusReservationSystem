@@ -34,6 +34,11 @@ class BusesController < ApplicationController
   end
 
 
+  def search
+     @buses = Bus.where("name LIKE ? AND source LIKE ? AND destination LIKE ?", "%#{params[:name]}%", "%#{params[:source]}%", "%#{params[:destination]}%")
+  end
+
+
   private 
 
   def bus_params

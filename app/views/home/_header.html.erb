@@ -1,8 +1,3 @@
-
-
-
-
-
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container-fluid">
     
@@ -23,14 +18,14 @@
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
           <li class="nav-item">
             <span class="navbar-text text-light"><%= current_bus_owner.email %></span>
-            <%= link_to "Sign Out", destroy_bus_owner_session_path, method: :delete, class: "nav-link active" %>
+            <%= link_to "Sign Out", destroy_bus_owner_session_path, class: "nav-link active" %>
           </li>
         </ul>
       <% elsif current_customer %>
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
           <li class="nav-item">
             <span class="navbar-text text-light"><%= current_customer.email %></span>
-            <%= link_to "Sign Out", destroy_customer_session_path, method: :delete, class: "nav-link active" %>
+            <%= link_to "Sign Out", destroy_customer_session_path, class: "nav-link active" %>
           </li>
         </ul>
       <% else %>

@@ -17,7 +17,17 @@
   <div class="container">
     <p class="notice"><%= notice %></p>
      <p class="alert"><%= alert %></p>
-    <%= yield %>
+    
+   
+<br><br>
+
+     <div>
+      <% if controller_name == "home" && action_name == "index" %>
+       <%= render "buses/search_form" %>
+      <% end %>
+     </div><br>
+      <%= yield %>
+
   </div>
 
 

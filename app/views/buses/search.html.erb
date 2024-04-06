@@ -1,8 +1,5 @@
 
 
-
-<br>
-
 <div class="table-container">
 <table>
   <thead>
@@ -12,7 +9,7 @@
       <th>Source</th>
       <th>Destination</th>
       <th>No_Of_Seats</th>
-      <th>BusOwner_Name</th>
+      <th>BusOnwer</th>
     </tr>
   </thead>
   <tbody>
@@ -21,8 +18,3 @@
 </table>
 </div>
 
-
-
-<% if bus_owner_signed_in? %>
-   <%= link_to "Create New Bus", new_bus_path %>
-<% end %>

@@ -1,0 +1,10 @@
+ <%= form_with  url: search_buses_path, method: :get do |form| %>
+      <%= form.label :"Bus Name",class: "s_f_l" %>
+       <%= form.label :"Source", class: "s_f_l" %>
+        <%= form.label :"Destination",class: "s_f_l" %>
+        <br>
+       <%= form.text_field :name  %> 
+       <%= form.text_field :source %> 
+       <%= form.text_field :destination%>
+       <%= form.submit "Search"%>
+<% end %>

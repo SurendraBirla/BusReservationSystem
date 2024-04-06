@@ -6,7 +6,13 @@ Rails.application.routes.draw do
   devise_for :customers
   devise_for :bus_owners
 
-  resources :buses, only:[:index, :new, :create]
+  resources :buses, only:[:index, :new, :create] do
+    collection do 
+      get 'search'
+    end
+  end
+
+  
   
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
