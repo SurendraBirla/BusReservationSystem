@@ -4,7 +4,9 @@
     <td><%= bus.source %></td>
     <td><%= bus.destination %></td>
     <td><%= bus.no_of_seats %></td>
-    <td><%= bus.bus_owner.name if bus.bus_owner %></td>
+    <td><%= bus.bus_owner.name if bus_owner_signed_in? %></td>
+    <td><%= link_to "View Seats" , bus_path(bus) %> </td>
+    
 </tr>
     
   

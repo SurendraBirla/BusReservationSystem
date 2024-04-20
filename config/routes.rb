@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   devise_for :customers
   devise_for :bus_owners
 
-  resources :buses, only:[:index, :new, :create] do
+  resources :buses, only:[:index, :new, :create, :show] do
     collection do 
       get 'search'
     end

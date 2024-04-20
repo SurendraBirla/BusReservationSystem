@@ -1,0 +1,12 @@
+<h1>Bus Details</h1>
+
+<h2>Seats</h2>
+<div>
+  <% @bus.seats.each do |seat| %>
+    <% if @booked_seats.include?(seat) %>
+      <span style="color: red;"><%= seat.seat_number %></span>
+    <% else %>
+      <span style="color: green;"><%= seat.seat_number %></span>
+    <% end %>
+  <% end %>
+</div>

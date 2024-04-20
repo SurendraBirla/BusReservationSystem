@@ -12,7 +12,10 @@
       <th>Source</th>
       <th>Destination</th>
       <th>No_Of_Seats</th>
-      <th>BusOwner_Name</th>
+      <% if bus_owner_signed_in? %>
+      <th>BusOwner</th>
+      <% end %>
+
     </tr>
   </thead>
   <tbody>
