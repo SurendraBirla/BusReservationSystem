@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  # get 'reservations/index'
+  # get 'reservations/new'
+  # get 'reservations/create'
+  # get 'reservations/cancel'
   # get 'buses/index'
   # get 'buses/new'
   # get 'buses/create'
@@ -11,6 +15,8 @@ Rails.application.routes.draw do
       get 'search'
     end
   end
+
+  resources :reservations, only:[:index, :new, :create, :cancel]
 
   
   

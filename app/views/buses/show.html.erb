@@ -2,11 +2,16 @@
 
 <h2>Seats</h2>
 <div>
-  <% @bus.seats.each do |seat| %>
-    <% if @booked_seats.include?(seat) %>
-      <span style="color: red;"><%= seat.seat_number %></span>
-    <% else %>
-      <span style="color: green;"><%= seat.seat_number %></span>
-    <% end %>
-  <% end %>
+	<%= form_with(model: @seat) do |form| %>
+      <% @bus.seats.each do |seat| %>
+         <% if @booked_seats.include?(seat) %>
+           <span style="color: red;"><%= seat.seat_number %></span>
+         <% else %>
+           <%# form.collection_select :seat_id, @seats, :id, :seat_number %>
+           <%= seat.seat_number %>
+           <%# select_tag 'seats[]', options_for_select(@seat.map { |s| [s.seat_number , s.seat_id] })%>
+
+         <% end %>
+      <% end %>
+   <% end %>
 </div>
